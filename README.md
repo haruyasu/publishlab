@@ -2,7 +2,7 @@
 
 TikTok Video Publisher - TikTokの公式APIを使用して動画を投稿するWebアプリケーション
 
-**URL:** https://haruyasu.github.io/publishlab/
+**URL:** https://publishlab.jp/
 
 ---
 
@@ -31,12 +31,12 @@ A web app that lets users upload and publish video content directly to TikTok th
 
 ### Terms of Service URL
 ```
-https://haruyasu.github.io/publishlab/terms.html
+https://publishlab.jp/terms.html
 ```
 
 ### Privacy Policy URL
 ```
-https://haruyasu.github.io/publishlab/privacy.html
+https://publishlab.jp/privacy.html
 ```
 
 ### Platforms
@@ -87,7 +87,7 @@ The complete flow is: Login → Upload Video → Set Caption & Privacy → Publi
 
 All video files are temporarily stored only during the upload process and are automatically deleted after posting. Users can disconnect their TikTok account at any time.
 
-Website URL: https://haruyasu.github.io/publishlab/
+Website URL: https://publishlab.jp/
 ```
 
 ### Demo Video（撮影手順）
@@ -95,7 +95,7 @@ Website URL: https://haruyasu.github.io/publishlab/
 デモ動画では以下のフローをすべて見せる必要があります：
 
 1. **ブラウザでサイトを開く**
-   - URL `https://haruyasu.github.io/publishlab/` が見えるようにする
+   - URL `https://publishlab.jp/` が見えるようにする
    - ランディングページ全体をスクロールして見せる
 
 2. **TikTokログイン**
@@ -131,12 +131,3 @@ Website URL: https://haruyasu.github.io/publishlab/
 - 形式: MP4 or MOV
 - 最大5ファイル、各50MB以下
 
----
-
-## カスタムドメイン設定（後日）
-
-独自ドメインを取得した場合：
-1. GitHub Pages の Settings > Custom domain にドメインを設定
-2. DNSの CNAME レコードを `haruyasu.github.io` に向ける
-3. 申請内容のURLをカスタムドメインに更新する
-4. Terms of Service URL と Privacy Policy URL も更新する
