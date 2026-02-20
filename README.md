@@ -26,7 +26,7 @@ Social Media
 
 ### Description（120文字以内）
 ```
-A web app that lets users upload and publish video content directly to TikTok through secure OAuth 2.0 authentication using the official TikTok API.
+A web app to upload and publish videos directly to TikTok with secure OAuth 2.0 authentication via the official API.
 ```
 
 ### Terms of Service URL
@@ -70,24 +70,24 @@ Web
 ### Explain how each product and scope works within your app（1000文字以内）
 
 ```
-publishlab is a web application that enables users to upload and publish video content directly to their TikTok accounts.
+publishlab is a web application that enables users to upload and publish videos directly to their TikTok accounts.
 
 Login Kit (user.info.basic scope):
-Users authenticate via TikTok's OAuth 2.0 flow by clicking the "Continue with TikTok" button on our website. After authorization, we receive an access token and the user's Open ID to maintain their session. We do not store passwords or personal profile data beyond what is necessary for authentication.
+Users authenticate via TikTok's OAuth 2.0 flow by clicking "Continue with TikTok" on our website. After authorization, we receive an access token and Open ID to maintain the session. We do not store passwords or personal data beyond what is needed for authentication.
 
 Content Posting API (video.upload, video.publish scopes):
 Once authenticated, users can:
-1. Select a video file from their device (MP4, MOV, WebM formats supported)
+1. Select a video file from their device (MP4, MOV, WebM)
 2. Add a caption with hashtags
-3. Configure privacy settings (Public, Friends, Only Me)
+3. Set privacy level (Public, Friends, Only Me)
 4. Mark content as AI-generated if applicable
-5. Publish the video directly to their TikTok account
+5. Publish the video to their TikTok account
 
-The complete flow is: Login → Upload Video → Set Caption & Privacy → Publish to TikTok.
+Flow: Login → Upload Video → Set Caption & Privacy → Publish to TikTok.
 
-All video files are temporarily stored only during the upload process and are automatically deleted after posting. Users can disconnect their TikTok account at any time.
+Video files are temporarily stored during upload and automatically deleted after posting. Users can disconnect their TikTok account at any time.
 
-Website URL: https://publishlab.jp/
+Website: https://publishlab.jp/
 ```
 
 ### Demo Video（撮影手順）
