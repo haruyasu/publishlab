@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>publishlab - TikTok Video Publisher</title>
+  <meta name="description" content="Upload and publish video content directly to your TikTok account through a secure, authorized connection using the official TikTok API.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="index.html" class="header-logo">
+      <div class="header-logo-icon">P</div>
+      <span class="header-logo-text">publishlab</span>
+    </a>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="ja">JA</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-icon">P</div>
+    <h1 data-i18n="heroTitle">publishlab</h1>
+    <p class="hero-subtitle" data-i18n="heroSubtitle">TikTok Video Publisher</p>
+    <p class="hero-description" data-i18n="heroDescription">
+      A web application that allows you to upload and publish video content directly to your TikTok account through a secure, authorized connection using the official TikTok API.
+    </p>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>
+      <h3 data-i18n="featureAuthTitle">Secure Authentication</h3>
+      <p data-i18n="featureAuthDesc">Log in securely with your TikTok account using OAuth 2.0 without sharing your TikTok password.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+      </div>
+      <h3 data-i18n="featureUploadTitle">Video Upload</h3>
+      <p data-i18n="featureUploadDesc">Upload video files directly from your browser. Supports MP4, WebM, and MOV formats.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+          <line x1="22" y1="2" x2="11" y2="13"/>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+        </svg>
+      </div>
+      <h3 data-i18n="featurePublishTitle">Direct Publishing</h3>
+      <p data-i18n="featurePublishDesc">Publish videos directly to TikTok with captions, hashtags, and privacy settings.</p>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works">
+    <h2 data-i18n="howItWorksTitle">How It Works</h2>
+    <div class="step">
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h3 data-i18n="step1Title">Connect Your TikTok Account</h3>
+        <p data-i18n="step1Desc">Click the login button and authorize publishlab to access your TikTok account via the official TikTok OAuth flow.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h3 data-i18n="step2Title">Upload Your Video</h3>
+        <p data-i18n="step2Desc">Select or drag-and-drop a video file from your device. Add a caption and hashtags for your post.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h3 data-i18n="step3Title">Publish to TikTok</h3>
+        <p data-i18n="step3Desc">Configure your content and privacy settings and publish. Your video will be posted directly to your TikTok account.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Started -->
+  <section class="get-started">
+    <div class="get-started-inner">
+      <h2 data-i18n="getStartedTitle">Get Started</h2>
+
+      <!-- State 1: Login -->
+      <div id="state-login" class="app-state active">
+        <div class="login-state">
+          <div class="status-bar">
+            <div class="status-dot disconnected"></div>
+            <span class="status-text" data-i18n="statusDisconnected">Not connected</span>
+          </div>
+          <p class="login-description" data-i18n="loginDescription">Connect your TikTok account to start uploading and publishing videos directly from publishlab.</p>
+          <button id="btn-tiktok-login" class="btn-tiktok">
+            <!-- TikTok Logo SVG -->
+            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.34 0H10.88V14.96C10.88 16.61 9.54 17.96 7.88 17.96C6.22 17.96 4.88 16.61 4.88 14.96C4.88 13.34 6.19 12.01 7.78 11.96V8.48C4.28 8.53 1.42 11.42 1.42 14.96C1.42 18.53 4.32 21.42 7.9 21.42C11.48 21.42 14.38 18.5 14.38 14.96V7.28C15.72 8.24 17.36 8.8 19.08 8.82V5.34C16.44 5.24 14.34 2.88 14.34 0Z" fill="black"/>
+            </svg>
+            <span data-i18n="loginButton">Continue with TikTok</span>
+          </button>
+          <p class="login-note" data-i18n="loginNote">By continuing, you agree to our Terms of Service and Privacy Policy. We only request the minimum permissions needed to post videos on your behalf.</p>
+        </div>
+      </div>
+
+      <!-- State 2: Upload & Post Form -->
+      <div id="state-form" class="app-state">
+        <div class="status-bar">
+          <div class="status-dot"></div>
+          <span class="status-text" data-i18n="statusConnected">Connected to TikTok</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="videoFileLabel">Video File</label>
+          <div class="file-upload" id="file-upload-area">
+            <div class="file-upload-icon">&#127909;</div>
+            <p class="file-upload-text" data-i18n="videoFilePlaceholder">Click or drag & drop to select a video</p>
+            <p class="file-info"></p>
+            <input type="file" id="video-file-input" accept="video/mp4,video/quicktime,video/webm,.mp4,.mov,.webm">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="captionLabel">Caption</label>
+          <input type="text" class="form-input" data-i18n="captionPlaceholder" placeholder="Enter caption for your video #hashtag">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="privacyLabel">Privacy</label>
+          <select class="form-select">
+            <option data-i18n="privacySelf">Only Me (for testing)</option>
+            <option data-i18n="privacyFriends">Friends</option>
+            <option data-i18n="privacyPublic">Public</option>
+          </select>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="ai-content" checked>
+          <label for="ai-content" data-i18n="aiContent">AI-generated content</label>
+        </div>
+
+        <button id="btn-post" class="btn-primary" data-i18n="postButton">Post to TikTok</button>
+
+        <div style="text-align:center;">
+          <button id="btn-logout" class="logout-link" data-i18n="logoutButton">Disconnect account</button>
+        </div>
+      </div>
+
+      <!-- State 3: Success -->
+      <div id="state-success" class="app-state">
+        <div class="success-state">
+          <div class="success-icon">
+            <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <h3 class="success-title" data-i18n="successTitle">Posted Successfully!</h3>
+          <p class="success-message" data-i18n="successMessage">Your video has been published to your TikTok account. It may take a few moments to appear on your profile.</p>
+          <button id="btn-post-another" class="btn-secondary" data-i18n="postAnother">Post Another Video</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="terms.html" data-i18n="footerTerms">Terms of Service</a>
+    <span class="footer-separator">|</span>
+    <a href="privacy.html" data-i18n="footerPrivacy">Privacy Policy</a>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
