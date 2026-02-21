@@ -116,6 +116,12 @@
         </div>
       </div>
 
+      <!-- Tab Bar (visible after login) -->
+      <div id="tab-bar" class="tab-bar" style="display:none;">
+        <button class="tab-btn active" data-tab="post" data-i18n="tabPost">Post</button>
+        <button class="tab-btn" data-tab="videos" data-i18n="tabMyVideos">My Videos</button>
+      </div>
+
       <!-- State 2: Upload & Post Form -->
       <div id="state-form" class="app-state">
         <div class="status-bar">
@@ -156,6 +162,18 @@
 
         <div style="text-align:center;">
           <button id="btn-logout" class="logout-link" data-i18n="logoutButton">Disconnect account</button>
+        </div>
+      </div>
+
+      <!-- State 2b: My Videos -->
+      <div id="state-videos" class="app-state">
+        <div class="status-bar">
+          <div class="status-dot"></div>
+          <span class="status-text" data-i18n="statusConnected">Connected to TikTok</span>
+        </div>
+        <div id="video-list"></div>
+        <div style="text-align:center;">
+          <button id="btn-logout-videos" class="logout-link" data-i18n="logoutButton">Disconnect account</button>
         </div>
       </div>
 
