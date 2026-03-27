@@ -16,7 +16,7 @@ export default function LoginState({ lang }: LoginStateProps) {
     <div className="w-full space-y-16">
       {/* Hero Section */}
       <section className="text-center space-y-6 pt-8">
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="text-3xl font-bold tracking-tight sm:text-5xl whitespace-nowrap">
           {t(lang, "heroTitle")}
         </h1>
         <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
@@ -128,9 +128,7 @@ export default function LoginState({ lang }: LoginStateProps) {
 
       {/* TikTok Data Usage Disclosure */}
       <section className="rounded-lg border border-border bg-card p-6 space-y-4">
-        <h2 className="text-lg font-semibold">
-          {t(lang, "dataUsageTitle")}
-        </h2>
+        <h2 className="text-lg font-semibold">{t(lang, "dataUsageTitle")}</h2>
         <ul className="space-y-3 text-sm text-muted-foreground">
           <li className="flex gap-2">
             <span className="text-primary mt-0.5">•</span>
@@ -157,12 +155,8 @@ export default function LoginState({ lang }: LoginStateProps) {
 
       {/* Bottom CTA */}
       <section className="text-center space-y-4 pb-4">
-        <h2 className="text-2xl font-bold">
-          {t(lang, "ctaTitle")}
-        </h2>
-        <p className="text-muted-foreground">
-          {t(lang, "ctaSubtitle")}
-        </p>
+        <h2 className="text-2xl font-bold">{t(lang, "ctaTitle")}</h2>
+        <p className="text-muted-foreground">{t(lang, "ctaSubtitle")}</p>
         <button
           onClick={handleLogin}
           className="inline-flex items-center justify-center h-12 px-8 gap-2.5 rounded-lg font-semibold text-base cursor-pointer transition-colors"
